@@ -3,7 +3,6 @@ import {Routes,Route, useLocation, Navigate} from "react-router-dom";
 import Registration from './pages/Registration.jsx';
 import Login from './pages/Login.jsx';
 import Home from './pages/Home.jsx';
-import axios from 'axios';
 import Nav from './components/Nav.jsx';
 import { userDataContext } from './context/UserContext.jsx';
 import About from './pages/About.jsx';
