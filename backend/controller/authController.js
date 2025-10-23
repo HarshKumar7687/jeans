@@ -28,7 +28,6 @@ export const registration = async (req,res)=>{
         })
         return res.status(201).json(user)
     } catch (error) {
-        console.log("sign-up error")
         return res.status(500).json({message:`registration Error: ${error}`})
     }
 }
@@ -54,7 +53,6 @@ export const login = async (req,res) => {
         })
         return res.status(201).json({message:"Logged in successfully"})
     } catch (error) {
-        console.log("login error")
         return res.status(500).json({message:`Login Error: ${error}`})
     }
 }
@@ -64,7 +62,6 @@ export const logout = async (req,res) => {
         res.clearCookie("token")
         return res.status(200).json({message:"Logged out in successfully"})
     } catch (error) {
-        console.log("logout error")
         return res.status(500).json({message:`Logout Error: ${error}`})
     }
 }
@@ -88,7 +85,6 @@ export const googleLogin = async (req,res) => {
         })
         return res.status(200).json(user)
     } catch (error) {
-        console.log("google login error:", error)
         return res.status(500).json({message:`Google login Error: ${error.message}`})
     }
 }
@@ -109,7 +105,6 @@ export const adminLogin = async (req,res) => {
         }
         return res.status(400).json({message: "invalid credentials"});
     } catch (error) {
-        console.log("admin login error:", error)
         return res.status(500).json({message:`Admin login Error: ${error.message}`})
     }
 }

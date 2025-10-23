@@ -9,7 +9,7 @@ export const getCurrentUser = async (req,res) => {
         }
         return res.status(200).json(user)
     } catch (error) {
-        console.log(error)
+        
         return res.status(500).json({message:`get current user error ${error}`})
     }
 }
@@ -27,7 +27,7 @@ export const getAdmin = async (req,res) => {
             role: "admin"
          })
     } catch (error) {
-        console.log(error)
+        
         return res.status(500).json({message:`get current admin error ${error}`})
     }
 }

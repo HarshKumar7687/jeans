@@ -19,16 +19,15 @@ function ShopContext({children}) {
     const getProducts = async () => {
         try {
             let result = await axios.get(serverUrl+"/api/product/list")
-            console.log(result.data)
             setProducts(result.data)
         } catch (error) {
-            console.log(error)
+            
         }
     }
 
     const addToCart = async (itemId,size)=>{
         if(!size){
-            console.log("Select Product Size.")
+            alert("Please select size")
             return;
         }
         let cartData = structuredClone(cartItem);
@@ -44,14 +43,12 @@ function ShopContext({children}) {
         }
 
         setCartItem(cartData)
-        console.log(cartData)
 
         if(userData){
             try {
                let result = await axios.post(serverUrl+"/api/cart/add",{itemId,size},{withCredentials:true})
-               console.log(result.data)
             } catch (error) {
-                console.log(error)
+                
             }
         } 
     }
@@ -62,7 +59,7 @@ function ShopContext({children}) {
             setCartItem(result.data)
 
         } catch (error) {
-            console.log(error)
+            
         }
     }
 
@@ -74,7 +71,7 @@ function ShopContext({children}) {
         try {
            await axios.post(serverUrl+"/api/cart/update",{itemId,size,quantity},{withCredentials:true}) 
         } catch (error) {
-            console.log(error)
+            
         }
         }
     }

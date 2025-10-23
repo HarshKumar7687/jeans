@@ -17,7 +17,6 @@ const adminAuth = (req,res,next) => {
             next();
 
     } catch (error) {
-        console.log("isAdmin Error")
         return res.status(500).json({message:`isAdmin Error: ${error}`})
     }
 }

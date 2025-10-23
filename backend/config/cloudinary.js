@@ -17,7 +17,7 @@ const uploadOnCloudinary = async (filePath) => {
     return uploadResult.secure_url;
   } catch (error) {
     fs.unlinkSync(filePath);
-    console.log(error)
+    
   }
 };
 

@@ -56,14 +56,13 @@ function placeOrder() {
       switch(method){
           case 'cod':
             const result = await axios.post(serverUrl+"/api/order/placeOrder",orderData,{withCredentials:true})
-            console.log(result.data)
+            
             if(result.data){
               setCartItem({})
               alert("Order Placed Successfully")
               navigate('/order')
             }else{
               alert("Failed to place order")
-              console.log(result.data.message)
             }
             break;
 
@@ -71,7 +70,7 @@ function placeOrder() {
             break;
           }
     } catch (error) {
-      console.log(error)
+      
     }
   }
   return (

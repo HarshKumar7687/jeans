@@ -122,7 +122,6 @@ function Contact() {
     }
 
     // For demo purposes
-    console.log('Email data:', data)
     return { ok: true }
   }
 

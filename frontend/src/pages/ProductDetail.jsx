@@ -18,7 +18,6 @@ function ProductDetail() {
         products.map((item)=>{
             if(item._id===productId){
                 setProductData(item)
-                console.log(productData)
                 setImage(item.image1)
                 setImage1(item.image1)
                 setImage2(item.image2)

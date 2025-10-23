@@ -22,11 +22,11 @@ import { userDataContext } from '../context/UserContext.jsx';
         e.preventDefault();
         try {
            const result = await axios.post(serverUrl + '/api/auth/login',{email,password},{withCredentials:true})
-           console.log(result.data)
+           
            getCurrentUser()
            navigate("/")
         } catch (error) {
-           console.log(error) 
+            
         }
      }
 
@@ -38,11 +38,11 @@ import { userDataContext } from '../context/UserContext.jsx';
             let email = user.email
 
             const result = await axios.post(serverUrl + "/api/auth/googlelogin",{name,email},{withCredentials:true})
-            console.log(result.data)
+            
             getCurrentUser()
             navigate("/")
         } catch (error) {
-            console.log(error)
+            
         }
     }
 

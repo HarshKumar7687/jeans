@@ -20,11 +20,10 @@ function Login() {
         e.preventDefault();
         try {
           const result = await axios.post(serverUrl + '/api/auth/adminlogin',{email,password},{withCredentials:true});
-          console.log(result.data);
           getAdmin()
           navigate("/")
         } catch (error) {
-          console.log(error)
+          alert("Login failed. Please check your credentials.")
         }
       }
   return (

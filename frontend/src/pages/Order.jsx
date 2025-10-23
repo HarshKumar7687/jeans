@@ -26,7 +26,7 @@ function Order() {
         setOrderData(allOrderItems.reverse());
       }
     } catch (error) {
-      console.log(error)
+      
     }
   }
 

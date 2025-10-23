@@ -12,10 +12,9 @@ function AdminContext({children}) {
       try {
         let result = await axios.get(serverUrl+"/api/user/getadmin",{withCredentials:true})
         setAdminData(result.data)
-        console.log(result.data)
       } catch (error) {
         setAdminData(null)
-        console.log(error)
+        alert("Session expired. Please login again.")
       }
     }
 

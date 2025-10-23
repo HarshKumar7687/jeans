@@ -13,9 +13,8 @@ function Lists() {
     try {
       let result = await axios.get(serverUrl+"/api/product/list")
       setList(result.data)
-      console.log(result.data)
     } catch (error) {
-      console.log(error)
+      alert("Failed to fetch products")
     }
   }
 
@@ -25,10 +24,10 @@ function Lists() {
         if(result.data){
           fetchList();
         }else{
-          console.log("Failed to remove product")
+          alert("Failed to remove product")
         }
       } catch (error) {
-        console.log(error)
+        alert("Error removing product")
       }
   }
 

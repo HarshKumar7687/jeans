@@ -18,10 +18,8 @@ function UserContext({children}) {
                 { withCredentials: true }
             )
             setUserData(result.data);
-            console.log("User data fetched:", result.data)
         } catch (error) {
             setUserData(null)
-            console.log("Error fetching user:", error.response?.data || error.message)
             navigate('/login')
         }
     }

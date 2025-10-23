@@ -161,7 +161,6 @@ function Cart() {
                 if (cartData.length > 0) {
                   navigate("/placeOrder");
                 } else {
-                  console.log("Cart is empty");
                   alert("Cart is empty");
                 }
               }}

@@ -37,7 +37,6 @@ function Add() {
       formData.append("image4",image4)
       
       let result = await axios.post(serverUrl+"/api/product/addProduct",formData,{withCredentials:true});
-      console.log(result.data)
       if(result.data){
         // Reset all form fields
         setName("")
@@ -59,7 +58,7 @@ function Add() {
         document.getElementById('image4').value = '';
       }
     } catch (error) {
-      console.log(error)
+      alert("Failed to add product. Please try again.")
     }
   };
   return (

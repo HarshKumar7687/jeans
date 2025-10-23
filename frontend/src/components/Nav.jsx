@@ -24,11 +24,11 @@ function Nav() {
   const handleLogout = async () => {
     try {
       const result = await axios.get(serverUrl + "/api/auth/logout", { withCredentials: true });
-      console.log(result.data);
+      ;
       getCurrentUser();
       setShowProfile(false); // Close profile after logout
     } catch (error) {
-      console.log(error);
+      ;
     }
   }
 

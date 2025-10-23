@@ -8,7 +8,6 @@ function BestSeller() {
   let [bestSeller,setBestSeller] = useState([])
   useEffect(()=>{
       let filterProducts = products.filter((item)=>item.bestSeller)
-      console.log(filterProducts)
       setBestSeller(filterProducts.slice(0,4))
   },[products])
   return (

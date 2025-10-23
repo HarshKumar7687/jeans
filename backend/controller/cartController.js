@@ -21,7 +21,6 @@ export const addToCart = async (req,res)=>{
         await User.findByIdAndUpdate(req.userId,{cartData})
         return res.status(201).json({message:"Added to cart"})
     } catch (error) {
-        console.log(error)
         return res.status(500).json({message:"Add to cart error"})
     }
 }
@@ -36,7 +35,7 @@ export const updateCart = async (req,res) => {
         await User.findByIdAndUpdate(req.userId,{cartData})
         return res.status(201).json({message:"cart updated"})
     } catch (error) {
-        console.log(error)
+        
         return res.status(500).json({message:"cart update error"})
     }
 }
@@ -47,7 +46,7 @@ export const getUserCart = async (req,res) => {
         let cartData = await userData.cartData
         return res.status(200).json(cartData)
     } catch (error) {
-        console.log(error)
+        
         return res.status(500).json({message:"user cart error"})
     }
 }
