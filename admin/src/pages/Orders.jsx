@@ -10,7 +10,7 @@ import axios from 'axios'
 
 function Orders() {
   let [orders, setOrders] = useState([])
-  let serverUrl = useContext(authDataContext)
+  let {serverUrl} = useContext(authDataContext)
   
   const fetchAllOrders = async () => {
     try {

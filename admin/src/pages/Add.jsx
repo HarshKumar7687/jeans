@@ -18,7 +18,7 @@ function Add() {
   const [subCategory, setSubCategory] = useState("Slim Fit Denim");
   const [bestSeller, setBestSeller] = useState(false);
   const [sizes, setSizes] = useState([]);
-  let serverUrl = useContext(authDataContext)
+  let {serverUrl} = useContext(authDataContext)
 
   const handleAddProduct = async (e) => {
     e.preventDefault()

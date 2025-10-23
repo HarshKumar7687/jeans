@@ -7,7 +7,7 @@ import { MdDelete } from "react-icons/md";
 
 function Lists() {
   let [list,setList] = useState([])
-  let serverUrl = useContext(authDataContext)
+  let {serverUrl} = useContext(authDataContext)
 
   const fetchList = async ()=>{
     try {

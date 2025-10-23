@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom'
 function placeOrder() {
   let [method,setMethod] = useState('cod')
   const {cartItem,setCartItem,getCartAmount,delivery_fees,products} = useContext(shopDataContext)
-  let serverUrl = useContext(authDataContext)
+  let {serverUrl} = useContext(authDataContext)
   let navigate = useNavigate()
   let [formData,setFormData] = useState({
     firstName: '',

@@ -11,7 +11,7 @@ function ShopContext({children}) {
     let [search,setSearch] = useState("")
     let [showSearch,setShowSearch] = useState(false)
     let {userData} = useContext(userDataContext)
-    let serverUrl = useContext(authDataContext)
+    let {serverUrl} = useContext(authDataContext)
     let [cartItem,setCartItem] = useState({})
     let currency = '₹'
     let delivery_fees = 40;

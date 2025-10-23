@@ -6,7 +6,7 @@ import axios from 'axios'
 export const adminDataContext = createContext()
 function AdminContext({children}) {
     let [adminData,setAdminData] = useState(null)
-    let serverUrl = useContext(authDataContext)
+    let {serverUrl} = useContext(authDataContext)
 
     const getAdmin = async () => {
       try {

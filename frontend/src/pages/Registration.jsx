@@ -12,7 +12,7 @@ import { userDataContext } from '../context/UserContext.jsx';
 
 const Registration = () => {
     let [show,setShow] = useState(false);
-    let serverUrl = useContext(authDataContext);
+    let {serverUrl} = useContext(authDataContext);
     let [name,setName] = useState("")
     let [email,setEmail] = useState("")
     let [password,setPassword] = useState("")
