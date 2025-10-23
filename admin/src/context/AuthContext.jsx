@@ -11,7 +11,7 @@ function AuthContext({children}) {
     }
   return (
     <div>
-      <authDataContext.Provider value={serverUrl}>
+      <authDataContext.Provider value={value}>
         {children}
       </authDataContext.Provider>
     </div>
