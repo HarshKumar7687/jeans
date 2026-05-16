@@ -18,7 +18,7 @@ let app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: ["https://jeans-frontend.onrender.com","https://jeans-admin.onrender.com"],
+    origin: ["http://localhost:5173","https://jeans-frontend.onrender.com","https://jeans-admin.onrender.com"],
     credentials: true,
 }))
 

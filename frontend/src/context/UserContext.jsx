@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 export const userDataContext = createContext()
 
 function UserContext({children}) {
-    let [userData,setUserData] = useState("")
+    let [userData,setUserData] = useState(null)
     let {serverUrl} = useContext(authDataContext)
     let navigate = useNavigate()
 
